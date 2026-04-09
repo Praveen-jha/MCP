@@ -18,10 +18,10 @@ resource "azurerm_network_security_group" "nsg" {
     }
   }
   lifecycle {
-    ignore_changes = [ 
+    ignore_changes = [
       # security_rule,
       # tags
-     ]
+    ]
   }
 }
 

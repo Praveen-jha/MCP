@@ -1,10 +1,10 @@
 resource "azurerm_subnet" "subnets" {
-  name                 = var.subnet_name
-  resource_group_name  = var.subnet_rg_name
-  address_prefixes     = var.subnet_address_prefixes
-  virtual_network_name = var.virtual_network_name
+  name                              = var.subnet_name
+  resource_group_name               = var.subnet_rg_name
+  address_prefixes                  = var.subnet_address_prefixes
+  virtual_network_name              = var.virtual_network_name
   private_endpoint_network_policies = var.private_endpoint_network_policies
-  service_endpoints                             = var.service_endpoints
+  service_endpoints                 = var.service_endpoints
   dynamic "delegation" {
     for_each = var.subnet_delegations == null ? [] : ["delegation"]
     content {

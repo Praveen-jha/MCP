@@ -9,7 +9,7 @@ resource "azurerm_network_interface" "nic" {
     private_ip_address_allocation = var.private_ip_address_allocation
     public_ip_address_id          = null
   }
-  lifecycle { 
+  lifecycle {
     ignore_changes = [
       ip_configuration,
       tags

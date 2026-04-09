@@ -30,16 +30,16 @@ variable "eventhub_namespace_public_network_access_enabled" {
 }
 variable "eventhub_namespace_auto_inflate_enabled" {
   description = "is Auto Inflate enabled for the EventHub Namespace"
-  type = bool
+  type        = bool
 }
 variable "eventhub_namespace_max_throughput_units" {
   description = "Specifies the maximum number of throughput units when Auto Inflate is Enabled"
-  type = number
+  type        = number
 }
 variable "evenhub_namespace_identity_type" {
   description = "identity type for the eventhub namespace"
-  type = string
-  default = "SystemAssigned"
+  type        = string
+  default     = "SystemAssigned"
 }
 variable "tags" {
   description = "Tags for eventhub"

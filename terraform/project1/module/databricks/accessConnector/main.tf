@@ -7,7 +7,7 @@ resource "azurerm_databricks_access_connector" "adb_connector" {
   }
   tags = var.tags
   lifecycle {
-    ignore_changes = [ 
+    ignore_changes = [
       # tags
     ]
   }

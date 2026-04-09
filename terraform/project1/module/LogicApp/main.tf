@@ -9,7 +9,7 @@ resource "azurerm_storage_account" "logic_app_storage_account" {
 
 resource "azurerm_storage_share" "logic_app_storage_account_share" {
   name               = var.storage_accoun_content_share_name
-  storage_account_id = azurerm_storage_account.logic_app_storage_account.id 
+  storage_account_id = azurerm_storage_account.logic_app_storage_account.id
   quota              = "5000"
 }
 

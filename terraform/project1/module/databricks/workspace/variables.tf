@@ -44,8 +44,8 @@ variable "databricks_custom_parameters" {
 }
 variable "infrastructure_encryption_enabled" {
   description = "Is the Databricks File System root file system enabled with a secondary layer of encryption with platform managed keys?"
-  type = bool
-  default = true
+  type        = bool
+  default     = true
 }
 # variable "databricks_customer_managed_key_enabled" {
 #   description = "Boolean flag indicating whether customer managed key is enabled for the Databricks workspace"

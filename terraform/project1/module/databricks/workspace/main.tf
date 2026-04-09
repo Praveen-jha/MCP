@@ -1,14 +1,14 @@
- # Resource block Azure Databricks Workspace
+# Resource block Azure Databricks Workspace
 resource "azurerm_databricks_workspace" "databricks_workspace" {
-  name                         = var.databricks_workspace_name
-  resource_group_name          = var.databricks_workspace_rg
-  location                     = var.databricks_workspace_location
-  sku                          = var.databricks_workspace_sku
-  tags                         = var.tags
-  managed_resource_group_name  = var.databricks_managed_rg
+  name                                  = var.databricks_workspace_name
+  resource_group_name                   = var.databricks_workspace_rg
+  location                              = var.databricks_workspace_location
+  sku                                   = var.databricks_workspace_sku
+  tags                                  = var.tags
+  managed_resource_group_name           = var.databricks_managed_rg
   public_network_access_enabled         = var.public_network_enabled
   network_security_group_rules_required = var.databricks_nsg_rules_required
-  infrastructure_encryption_enabled = var.infrastructure_encryption_enabled
+  infrastructure_encryption_enabled     = var.infrastructure_encryption_enabled
 
   # This block configures custom parameters for a Databricks deployment, including network settings and storage account information.
   custom_parameters {
@@ -21,7 +21,7 @@ resource "azurerm_databricks_workspace" "databricks_workspace" {
     # storage_account_name                                 = var.databricks_custom_parameters.storage_account_name
   }
 
- 
+
   lifecycle {
     ignore_changes = [
       # custom_parameters,         

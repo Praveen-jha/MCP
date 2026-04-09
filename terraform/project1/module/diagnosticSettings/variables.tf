@@ -9,7 +9,7 @@ variable "targetResourceId" {
 variable "enabledLogs" {
   description = "List of categories for enabled logs"
   type        = list(string)
-  default = [ "allLogs" ]
+  default     = ["allLogs"]
 }
 variable "metric" {
   description = "List of categories for metrics"

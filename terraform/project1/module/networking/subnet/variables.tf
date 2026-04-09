@@ -15,15 +15,15 @@ variable "virtual_network_name" {
   description = "The name of the Azure Virtual Network where the Subnet will be created."
 }
 variable "private_endpoint_network_policies" {
-  type = string
+  type        = string
   description = "private endpoint network policies to be enabled on the subnet, defaults to Route Table"
-  default = "RouteTableEnabled"
+  default     = "RouteTableEnabled"
 }
 variable "service_endpoints" {
   type        = list(string)
   description = "The list of service endpoints to associate with the Azure Subnet."
-  default =null
-  nullable = true
+  default     = null
+  nullable    = true
 }
 variable "subnet_delegations" {
   type        = any

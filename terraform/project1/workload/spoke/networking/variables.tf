@@ -48,10 +48,10 @@ variable "on_premises_data_gateway_vm_2" {
 }
 
 variable "common_tags" {
-  type = map(string)
+  type        = map(string)
   description = "tags for the resources"
 }
 variable "source_image_id" {
-  type = string
+  type        = string
   description = "Custom Image ID for virtual machine"
 }

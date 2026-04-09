@@ -1,5 +1,5 @@
 variable "rt_name" {
-  type = string
+  type        = string
   description = "The name of the Route Table."
 }
 variable "rt_location" {
@@ -15,7 +15,7 @@ variable "rt_tags" {
   description = "A map of tags to apply to the Azure Route Table."
 }
 variable "subnet_id" {
-  type = string
+  type        = string
   description = "Subnet ID where route table will be associated"
 }
 variable "rt_routes" {

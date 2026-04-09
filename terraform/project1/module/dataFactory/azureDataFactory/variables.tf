@@ -13,7 +13,7 @@ variable "data_factory_rg" {
   type        = string
 }
 variable "public_network_enabled" {
-  type    = bool
+  type = bool
 }
 variable "managed_virtual_network_enabled" {
   description = "Specifies whether the Managed Virtual Network feature is enabled for the Azure Data Factory. Setting this to 'true' enables secure network traffic between data sources."

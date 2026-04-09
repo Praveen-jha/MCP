@@ -64,31 +64,31 @@ variable "logic_app_identity_type" {
 
 variable "logic_app_public_access_enabled" {
   description = "public network access for logic app"
-  type = string
-  default = "Disabled"
+  type        = string
+  default     = "Disabled"
 }
 
 variable "storage_pe_subnet_id" {
-  type = string
+  type        = string
   description = "Subnet ID where all the Private endpoint will be deployed"
 }
 variable "private_dns_zone_ids" {
-  type = list(string)
+  type        = list(string)
   description = "private dns zone ids"
 }
 variable "functions_worker_runtime" {
-  type = string
+  type        = string
   description = "function workder runtime for logic aap setting"
 }
 
 variable "website_dns_server" {
-  type = string
+  type        = string
   description = "dns server for runtime"
-  default = "168.63.129.16"
+  default     = "168.63.129.16"
 }
 variable "website_node_default_version" {
-  type = string
+  type        = string
   description = "version of node"
-  default = "~20"
+  default     = "~20"
 }
 

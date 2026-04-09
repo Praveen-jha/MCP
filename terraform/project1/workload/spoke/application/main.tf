@@ -12,19 +12,19 @@ module "keyvault" {
   kv_tags                        = var.common_tags
 }
 module "storage_account" {
-  source                        = "../../../Modules/storageAccount"
-  storage_account_name          = var.storage_account_name
-  rg_name                       = var.rg_name
-  location                      = local.location_primary
-  public_network_access_enabled = var.public_network_access_enabled
-  account_tier                  = local.storage_account.account_tier
-  account_kind                  = local.storage_account.account_kind
-  account_replication_type      = local.storage_account.account_replication_type
-  is_hns_enabled                = local.storage_account.is_hns_enabled
-  shared_access_key_enabled     = local.storage_account.shared_access_key_enabled
-  storage_account_identity_type = local.storage_account.identity_type
+  source                            = "../../../Modules/storageAccount"
+  storage_account_name              = var.storage_account_name
+  rg_name                           = var.rg_name
+  location                          = local.location_primary
+  public_network_access_enabled     = var.public_network_access_enabled
+  account_tier                      = local.storage_account.account_tier
+  account_kind                      = local.storage_account.account_kind
+  account_replication_type          = local.storage_account.account_replication_type
+  is_hns_enabled                    = local.storage_account.is_hns_enabled
+  shared_access_key_enabled         = local.storage_account.shared_access_key_enabled
+  storage_account_identity_type     = local.storage_account.identity_type
   infrastructure_encryption_enabled = local.storage_account.infrastructure_encryption_enabled
-  tags = var.common_tags
+  tags                              = var.common_tags
 }
 module "eventhub_namespace" {
   source                                           = "../../../Modules/eventhub"
@@ -58,17 +58,17 @@ module "databricks_access_connector" {
   tags                   = var.common_tags
 }
 module "databricks_workspace" {
-  source                        = "../../../Modules/databricks/workspace"
-  databricks_workspace_name     = var.databricks_workspace_name
-  databricks_workspace_rg       = var.rg_name
-  databricks_workspace_location = local.location_primary
-  databricks_workspace_sku      = local.databricks_workspace.sku
-  databricks_managed_rg         = var.databricks_managed_rg_name
-  public_network_enabled        = var.public_network_access_enabled
-  databricks_nsg_rules_required = local.databricks_workspace.databricks_nsg_rules_required
-  databricks_custom_parameters  = local.databricks_workspace.custom_parameters
+  source                            = "../../../Modules/databricks/workspace"
+  databricks_workspace_name         = var.databricks_workspace_name
+  databricks_workspace_rg           = var.rg_name
+  databricks_workspace_location     = local.location_primary
+  databricks_workspace_sku          = local.databricks_workspace.sku
+  databricks_managed_rg             = var.databricks_managed_rg_name
+  public_network_enabled            = var.public_network_access_enabled
+  databricks_nsg_rules_required     = local.databricks_workspace.databricks_nsg_rules_required
+  databricks_custom_parameters      = local.databricks_workspace.custom_parameters
   infrastructure_encryption_enabled = local.databricks_workspace.infrastructure_encryption_enabled
-  tags = var.common_tags
+  tags                              = var.common_tags
 }
 
 module "logic_app" {

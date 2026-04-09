@@ -18,7 +18,7 @@ variable "nsg_tags" {
   description = "A map of tags to apply to the Azure Network Security Group."
 }
 variable "subnet_id" {
-  type = string
+  type        = string
   description = "Subnet ID where network security group will be associated to"
 }
 

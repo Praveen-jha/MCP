@@ -51,6 +51,6 @@ variable "storage_account_identity_type" {
 
 variable "infrastructure_encryption_enabled" {
   description = "Is infrastructure encryption enabled?"
-  type =   bool
-  default = true
+  type        = bool
+  default     = true
 }
