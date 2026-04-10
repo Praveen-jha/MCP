@@ -1,0 +1,2 @@
+contributor_scope = "/subscriptions/b092ed20-9480-45e1-a96c-8b307bfa9eab"
+kv_admin_scope = "/subscriptions/b092ed20-9480-45e1-a96c-8b307bfa9eab/resourceGroups/ict-platform-ccai-ai-rg/providers/Microsoft.KeyVault/vaults/ict-platform-ccai-kv"

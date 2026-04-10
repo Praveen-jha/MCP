@@ -1,0 +1,22 @@
+log_retention_in_days = 90
+rg_location           = "UAE North"
+rg_creation           = "new"
+tenant_name           = "ict"
+environment           = "shared"
+logAnalytics_tags = {
+  "Workload Category"  = "Internal Workloads"
+  "Workload Name"      = "Log Analytics Workspace"
+  "Business Unit Code" = "DPS"
+  "Tier"               = "Monitoring"
+  "Workload Architype" = "Internal Platform"
+  "Environment"        = "Dev"
+  "Environment Type"   = "Non Production"
+  "Architecture Type"  = "PaaS"
+}
+bu_name                        = "hrbot"
+# sa_blob_private_dns_zone_id    = ["/subscriptions/c8b99861-fdf5-4f0c-8f85-e75b141fca08/resourceGroups/ict-platform-hrbot-hub-network-rg/providers/Microsoft.Network/privateDnsZones/privatelink.blob.core.windows.net"]
+# pep_subnet_name                = "ict-platform-hrbot-hub-pep-snet-uaen"
+# pep_virtual_network_name       = "ict-platform-hrbot-hub-vnet-uaen"
+# pep_resource_group_name        = "ict-platform-hrbot-hub-network-rg"
+# storage_account_name           = "dusahrbotsharedtfstate"
+# storage_account_resource_group = "ict-platform-hrbot-shared-tfstate-rg"

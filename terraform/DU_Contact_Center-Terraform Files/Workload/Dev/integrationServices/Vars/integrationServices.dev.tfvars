@@ -1,0 +1,22 @@
+rg_creation              = "existing"
+fabric_location          = "UAE North"
+tenant_name              = "ict"
+environment              = "ccai-dev"
+location_shortname       = "uaen"
+workload_type            = "data"
+fabric_capacity_admin    = "narendranath.thota@duict.onmicrosoft.com"
+fabric_capacity_sku      = "Fabric"
+fabric_sub_id            = "aefbbd9d-b129-461a-9571-c4b91e70e6a8"
+fabric_capacity_sku_name = "F8"
+fabric_capacity_tier     = "Fabric"
+fabric_tags = {
+  "Workload Category"  = "Internal Workloads"
+  "Business Unit Code" = "DPS"
+  "Workload Architype" = "Internal Platform"
+  "Tier"               = "Integration Services"
+  "Environment"        = "Dev"
+  "Environment Type"   = "Non Production"
+  "Workload Name"      = "Microsoft Fabric"
+  "Architecture Type"  = "SaaS"
+}
+

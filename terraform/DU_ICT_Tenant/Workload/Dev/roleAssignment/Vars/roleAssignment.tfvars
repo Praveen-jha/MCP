@@ -1,0 +1,5 @@
+key_vault_name                = "ict-platfor-hrbot-dev-kv"
+key_vault_resource_group_name = "ict-platform-hrbot-dev-data-rg"
+storage_account_id            = "/subscriptions/23c04f75-916a-4128-ae5c-d0e2a5c1d89f/resourceGroups/ict-platform-hrbot-dev-data-rg/providers/Microsoft.Storage/storageAccounts/dusahrbotdevhrdata"
+data_resource_group_name      = "ict-platform-hrbot-dev-data-rg"
+uaid_name                     = "ict-platform-hrbot-dev-uaid"

@@ -1,0 +1,71 @@
+# Variables for Hub Network Workload
+variable "nameConfig" {
+  type = object({
+    defaultLocation = string      //Location for the Resource to be Deployed.
+    tags            = map(string) //"Tags are key-value pairs that help organize and manage resources by categorizing them (e.g., by environment, department, or purpose)."
+    rg_creation     = string      //"Flag to indicate whether a new resource group should be created or existing resource group is used."
+    environment     = string      //Deployment Environment (for example UAT or Prod).
+    businessunit    = string      //Workload type of the resource
+    identity        = string      //Flag to use in Naming Convention
+  })
+}
+
+variable "hub_network" {
+  type = object({
+    address_space_vnet            = list(string) //The address space for the virtual network.
+    subnet_compute_address_prefix = list(string) //A list of address prefixes for the compute subnet.
+    subnet_ha1_address_prefix     = list(string) //A list of address prefixes for the ha1 subnet.
+    subnet_ha2_address_prefix     = list(string) //A list of address prefixes for the ha2 subnet.
+    subnet_nsg_association        = bool         //subnet nsg assocation bool: defaults to true
+    subnet_routetable_association = bool         //subnet rt assocation bool: defaults to true
+  })
+}
+
+variable "shaVM" {
+  type = object({
+    vmSize                        = string //The size of the virtual machine, which defines its compute resources (e.g., 'Standard_F2').
+    caching                       = string //The caching type for the virtual machine's OS disk (e.g., 'ReadWrite', 'ReadOnly').
+    storage_account_type          = string //The type of storage account for the OS disk (e.g., 'Standard_LRS', 'Premium_LRS').
+    publisher                     = string //The publisher of the Windows image for the virtual machine. For example, 'MicrosoftWindowsServer'.
+    offer                         = string //The offer for the Windows image, which specifies the type of Windows OS (e.g., 'WindowsServer').
+    sku                           = string //The SKU of the Windows image.
+    version                       = string //The version of the Windows image to use for the virtual machine.
+    disk_size_gb                  = number //The Size of the Internal OS Disk in GB.
+    private_ip_address_allocation = string //The allocation method for the private IP address. Options include 'Dynamic' or 'Static'.
+    identity_type                 = string //The type of managed identity (e.g., SystemAssigned, UserAssigned).
+    admin_username                = string //The username for the administrator account to be created on the virtual machine.
+    admin_password                = string //VM Password
+  })
+}
+
+variable "dataDiskResources" {
+  type = list(object({
+    name = string
+    sku  = string
+    properties = object({
+      createOption = string
+      diskSizeGB   = number
+    })
+  }))
+  description = "A list of managed disk resources to be created separately."
+}
+
+variable "sqlVM" {
+  type = object({
+    sql_license_type          = string //The SQL Server license type. Possible values are AHUB (Azure Hybrid Benefit), DR (Disaster Recovery), and PAYG (Pay-As-You-Go). Changing this forces a new resource to be created.
+    sqlAuthenticationLogin    = string //The SQL Authentication login username.
+    sqlAuthenticationPassword = string //The SQL Authentication login password.
+    sqlConnectivityType       = string //The SQL connectivity type (e.g., 'Private', 'Public').
+    sqlPortNumber             = number //The port number for SQL connectivity.
+  })
+}
+
+variable "enable_high_availability" {
+  type        = bool
+  description = "Enable High Availability for SQL VM or not."
+}
+
+variable "availability_zones" {
+  description = "A list of Availability Zones for the VMs (e.g., ['1', '2', '3'])."
+  type        = list(string)
+}

@@ -1,0 +1,47 @@
+address_space_vnet = ["172.20.15.0/24"]
+vnet_tags = {
+  "Workload Category"  = "Internal Workloads"
+  "Workload Name"      = "Prod Vnet"
+  "Tier"               = "Networking"
+  "Business Unit Code" = "DPS"
+  "Workload Architype" = "Internal Platform"
+  "Environment"        = "Prod"
+  "Environment Type"   = "Production"
+  "Architecture Type"  = "IaaS"
+}
+nsg_tags = {
+  "Workload Category"  = "Internal Workloads"
+  "Workload Name"      = "Development VM NSG"
+  "Business Unit Code" = "DPS"
+  "Tier"               = "Networking"
+  "Workload Architype" = "Internal Platform"
+  "Environment"        = "Prod"
+  "Environment Type"   = "Production"
+  "Architecture Type"  = "IaaS"
+}
+rt_tags = {
+  "Workload Category"  = "Internal Workloads"
+  "Workload Name"      = "Prod Route Table"
+  "Business Unit Code" = "DPS"
+  "Tier"               = "Networking"
+  "Workload Architype" = "Internal Platform"
+  "Environment"        = "Prod"
+  "Environment Type"   = "Production"
+  "Architecture Type"  = "IaaS"
+}
+subnet_py_app_address_prefix   = ["172.20.15.64/26"]
+subnet_compute_address_prefix  = ["172.20.15.160/28"]
+subnet_node_app_address_prefix = ["172.20.15.0/26"]
+subnet_pep_address_prefix      = ["172.20.15.128/27"]
+rg_location                    = "UAE North"
+rg_creation                    = "new"
+tenant_name                    = "ict"
+environment                    = "prod"
+bu_name                        = "gitex"
+location_shortname             = "uaen"
+hub_vnet_id                    = "/subscriptions/c8b99861-fdf5-4f0c-8f85-e75b141fca08/resourceGroups/ict-platform-hrbot-hub-network-rg/providers/Microsoft.Network/virtualNetworks/ict-platform-hrbot-hub-vnet-uaen"
+hub_rg_name                    = "ict-platform-hrbot-hub-network-rg"
+hub_vnet_name                  = "ict-platform-hrbot-hub-vnet-uaen"
+dns_server                     = ["172.20.0.4"] 
+hub_subscription_id            = "c8b99861-fdf5-4f0c-8f85-e75b141fca08"
+spoke_subscription_id          = "2377028b-4d18-49a8-a533-a5d47f0fca2b"

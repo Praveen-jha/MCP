@@ -1,0 +1,50 @@
+rg_creation                   = "new"
+rg_location                   = "UAE North"
+storage_account_tier          = "Standard"
+account_replication_type      = "LRS"
+storage_identity_type         = "UserAssigned"
+tenant_name                   = "ict"
+bu_name                       = "gitex"
+environment                   = "prod"
+key_vault_sku_name            = "standard"
+pep_subnet_name               = "ict-platform-gitex-prod-pep-snet-uaen"
+pep_virtual_network_name      = "ict-platform-gitex-prod-vnet-uaen"
+pep_resource_group_name       = "ict-platform-gitex-prod-network-rg"
+key_vault_private_dns_zone_id = ["/subscriptions/c8b99861-fdf5-4f0c-8f85-e75b141fca08/resourceGroups/ict-platform-hrbot-hub-network-rg/providers/Microsoft.Network/privateDnsZones/privatelink.vaultcore.azure.net"]
+adls_blob_private_dns_zone_id = ["/subscriptions/c8b99861-fdf5-4f0c-8f85-e75b141fca08/resourceGroups/ict-platform-hrbot-hub-network-rg/providers/Microsoft.Network/privateDnsZones/privatelink.blob.core.windows.net"]
+adls_dfs_private_dns_zone_id  = ["/subscriptions/c8b99861-fdf5-4f0c-8f85-e75b141fca08/resourceGroups/ict-platform-hrbot-hub-network-rg/providers/Microsoft.Network/privateDnsZones/privatelink.dfs.core.windows.net"]
+adls_tags = {
+  "Workload Category"  = "Internal Workloads"
+  "Workload Name"      = "Storage Account"
+  "Business Unit Code" = "DPS"
+  "Tier"               = "Data"
+  "Workload Architype" = "Internal Platform"
+  "Environment"        = "Prod"
+  "Environment Type"   = "Production"
+  "Architecture Type"  = "PaaS"
+}
+keyvault_tags = {
+  "Workload Category"  = "Internal Workloads"
+  "Workload Name"      = "Key Vault"
+  "Business Unit Code" = "DPS"
+  "Tier"               = "Data"
+  "Workload Architype" = "Internal Platform"
+  "Environment"        = "Prod"
+  "Environment Type"   = "Production"
+  "Architecture Type"  = "PaaS"
+}
+key_opts                                 = ["decrypt", "encrypt", "sign", "unwrapKey", "verify", "wrapKey"]
+key_type                                 = "RSA"
+key_size                                 = 4096
+application_insights_resource_group_name = "ict-platform-gitex-prod-app-rg"
+application_insights_name                = "ict-platform-gitex-prod-appi"
+openai_account_name                      = "ict-platform-gitex-prod-oai"
+openai_resource_group_name               = "ict-platform-gitex-prod-rg"
+ai_resource_group_name                   = "ict-platform-gitex-prod-ai-rg"
+di_account_name                          = "ict-platform-gitex-prod-di"
+search_service_name                      = "ict-platform-gitex-prod-srch"
+translator_service_name                  = "ict-platform-gitex-prod-trsl"
+storage_account_name_tfstate             = "dusagitexprodtfstate"
+tfstate_storage_account_resource_group   = "ict-platform-gitex-prod-tfstate-rg"
+
+
